@@ -5,6 +5,11 @@ Nama Kelompok :
 3. Fathin Muhashibi Putra
 */
 
+/*
+Deskripsi :
+Sorting menggunakan Heapsort dengan STL
+*/
+
 // HeapSortSTL.cpp : Defines the entry point for the console application.
 #include <bits/stdc++.h>
 using namespace std;
