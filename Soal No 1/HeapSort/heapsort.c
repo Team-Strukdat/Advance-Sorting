@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <time.h>
 
+u_int64_t stability = 0;
+
 // Function to swap the the position of two elements
 void swap(int *a, int *b)
 {
@@ -28,6 +30,7 @@ void heapify(int arr[], int n, int i)
     if (largest != i)
     {
         swap(&arr[i], &arr[largest]);
+        stability++;
         heapify(arr, n, largest);
     }
 }
@@ -43,6 +46,7 @@ void heapSort(int arr[], int n)
     for (int i = n - 1; i >= 0; i--)
     {
         swap(&arr[0], &arr[i]);
+        stability++;
 
         // Heapify root element to get highest element at root again
         heapify(arr, i, 0);
@@ -58,6 +62,7 @@ void printArray(int arr[], int n, int sat)
         output = fopen("output_10.txt", "w");
         for (int i = 0; i < n; i++)
         {
+            // Print variabel stability
             fprintf(output, "%d\n", arr[i]);
         }
     }
@@ -127,6 +132,8 @@ int main()
     // Print time
     kesimpulan = fopen("kesimpulan.txt", "a");
     fprintf(kesimpulan, "10 Data memakan waktu : %f\n", (double)(endtime - starttime) / CLOCKS_PER_SEC);
+    fprintf(kesimpulan, "Comparasion : %llu\n", stability);
+    stability = 0;
     fclose(in);
 
     // 100 Data
@@ -141,6 +148,8 @@ int main()
     printArray(arr, n, 2);
     // Print time
     fprintf(kesimpulan, "100 Data memakan waktu : %f\n", (double)(endtime - starttime) / CLOCKS_PER_SEC);
+    fprintf(kesimpulan, "Comparasion : %llu\n", stability);
+    stability = 0;
     fclose(in);
 
     // 1000 data
@@ -155,6 +164,8 @@ int main()
     printArray(arr, n, 3);
     // Print time
     fprintf(kesimpulan, "1000 Data memakan waktu : %f\n", (double)(endtime - starttime) / CLOCKS_PER_SEC);
+    fprintf(kesimpulan, "Comparasion : %llu\n", stability);
+    stability = 0;
     fclose(in);
 
     // 10000 data
@@ -169,6 +180,8 @@ int main()
     printArray(arr, n, 4);
     // Print time
     fprintf(kesimpulan, "10000 Data memakan waktu : %f\n", (double)(endtime - starttime) / CLOCKS_PER_SEC);
+    fprintf(kesimpulan, "Comparasion : %llu\n", stability);
+    stability = 0;
     fclose(in);
 
     // 100000 data
@@ -183,6 +196,8 @@ int main()
     printArray(arr, n, 5);
     // Print time
     fprintf(kesimpulan, "100000 Data memakan waktu : %f\n", (double)(endtime - starttime) / CLOCKS_PER_SEC);
+    fprintf(kesimpulan, "Comparasion : %llu\n", stability);
+    stability = 0;
     fclose(in);
 
     fclose(kesimpulan);
