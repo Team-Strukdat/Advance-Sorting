@@ -1,5 +1,14 @@
+/*
+Nama Kelompok :
+1. Robby Ulung Pambudi
+2. M. Armand Giovani
+3. Fathin Muhashibi Putra
+*/
+
 // C++ code to demonstrate the working of 
 // is_heap() and is_heap_until()
+
+
 #include <iostream>
 using namespace std;
 
