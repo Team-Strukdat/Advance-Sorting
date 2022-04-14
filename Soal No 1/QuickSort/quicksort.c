@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <time.h>
 
+long long int comparation = 0;
+
 // function to swap elements
 void swap(int *a, int *b)
 {
@@ -34,11 +36,13 @@ int partition(int array[], int low, int high)
 
             // swap element at i with element at j
             swap(&array[i], &array[j]);
+            comparation += 1;
         }
     }
 
     // swap the pivot element with the greater element at i
     swap(&array[i + 1], &array[high]);
+    comparation += 1;
 
     // return the partition point
     return (i + 1);
@@ -138,6 +142,8 @@ int main()
     createArray(data, n, 1);
     double time_taken = ((double)(end - start)) / CLOCKS_PER_SEC; // in seconds
     fprintf(kesimpulan, "10 Data memakan waktu %f ms\n", time_taken);
+    fprintf(kesimpulan, "comparation %lld\n", comparation);
+    comparation = 0;
     fclose(in);
 
     // 100 data
@@ -149,6 +155,8 @@ int main()
     createArray(data, n, 2);
     time_taken = ((double)(end - start)) / CLOCKS_PER_SEC; // in seconds
     fprintf(kesimpulan, "100 Data memakan waktu %f ms\n", time_taken);
+    fprintf(kesimpulan, "comparation %lld\n", comparation);
+    comparation = 0;
     fclose(in);
 
     // 1000 data
@@ -160,6 +168,8 @@ int main()
     createArray(data, n, 3);
     time_taken = ((double)(end - start)) / CLOCKS_PER_SEC; // in seconds
     fprintf(kesimpulan, "1000 Data memakan waktu %f ms\n", time_taken);
+    fprintf(kesimpulan, "comparation %lld\n", comparation);
+    comparation = 0;
     fclose(in);
 
     // 10000 data
@@ -171,6 +181,8 @@ int main()
     createArray(data, n, 4);
     time_taken = ((double)(end - start)) / CLOCKS_PER_SEC; // in seconds
     fprintf(kesimpulan, "10000 Data memakan waktu %f ms\n", time_taken);
+    fprintf(kesimpulan, "Stability %lld\n", comparation);
+    comparation = 0;
     fclose(in);
 
     // 100000 data
@@ -182,6 +194,7 @@ int main()
     createArray(data, n, 5);
     time_taken = ((double)(end - start)) / CLOCKS_PER_SEC; // in seconds
     fprintf(kesimpulan, "100000 Data memakan waktu %f ms\n", time_taken);
+    fprintf(kesimpulan, "comparation %lld\n", comparation);
     fclose(in);
 
     fclose(kesimpulan);
