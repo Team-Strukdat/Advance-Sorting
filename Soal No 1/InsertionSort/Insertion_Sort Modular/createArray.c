@@ -1,6 +1,6 @@
 #include "header.h"
 
-// Fungsi utilitas untuk membuat array berukuran n
+// A utility function to print an array of size n
 void createArray(int arr[], int n, int sat)
 {
     FILE *output;

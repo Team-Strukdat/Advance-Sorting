@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <time.h>
 
-int64_t comparasion = 0;
+long long int comparation = 0;
 
 /* Function to sort an array using insertion sort*/
 void insertionSort(int arr[], int n)
@@ -21,10 +21,10 @@ void insertionSort(int arr[], int n)
         {
             arr[j + 1] = arr[j];
             j = j - 1;
-            comparasion += 1;
+            comparation += 1;
         }
         arr[j + 1] = key;
-        comparasion += 1;
+        comparation += 1;
     }
 }
 
@@ -109,11 +109,11 @@ int main()
     createArray(arr, n, 1);
     double time_spent = (double)(end - start) / CLOCKS_PER_SEC;
     fprintf(kesimpulan, "10 Data memakan waktu selama : %f ms\n", time_spent);
-    fprintf(kesimpulan, "Comparasion %llu\n", comparasion);
+    fprintf(kesimpulan, "comparation %llu\n", comparation);
     fclose(in);
 
     // Untuk 100 data
-    comparasion = 0;
+    comparation = 0;
     n = 0;
     in = fopen("input100.txt", "r");
     scaningNumber(arr, in, &n);
@@ -123,11 +123,11 @@ int main()
     createArray(arr, n, 2);
     time_spent = (double)(end - start) / CLOCKS_PER_SEC;
     fprintf(kesimpulan, "100 Data memakan waktu selama : %f ms\n", time_spent);
-    fprintf(kesimpulan, "Comparasion %llu\n", comparasion);
+    fprintf(kesimpulan, "comparation %llu\n", comparation);
     fclose(in);
 
     // Untuk 1000 data
-    comparasion = 0;
+    comparation = 0;
     n = 0;
     in = fopen("input1000.txt", "r");
     scaningNumber(arr, in, &n);
@@ -137,7 +137,7 @@ int main()
     createArray(arr, n, 3);
     time_spent = (double)(end - start) / CLOCKS_PER_SEC;
     fprintf(kesimpulan, "1000 Data memakan waktu selama : %f ms\n", time_spent);
-    fprintf(kesimpulan, "Comparasion %llu\n", comparasion);
+    fprintf(kesimpulan, "comparation %llu\n", comparation);
     fclose(in);
 
     // Untuk 10000 data
@@ -150,7 +150,7 @@ int main()
     createArray(arr, n, 4);
     time_spent = (double)(end - start) / CLOCKS_PER_SEC;
     fprintf(kesimpulan, "10000 Data memakan waktu selama : %f ms\n", time_spent);
-    fprintf(kesimpulan, "Comparasion %llu\n", comparasion);
+    fprintf(kesimpulan, "comparation %llu\n", comparation);
     fclose(in);
 
     // Untuk 100000 data
@@ -163,7 +163,7 @@ int main()
     createArray(arr, n, 5);
     time_spent = (double)(end - start) / CLOCKS_PER_SEC;
     fprintf(kesimpulan, "100000 Data memakan waktu selama : %f ms\n", time_spent);
-    fprintf(kesimpulan, "Comparasion %llu\n", comparasion);
+    fprintf(kesimpulan, "comparation %llu\n", comparation);
     fclose(in);
 
     fclose(kesimpulan);

@@ -1,6 +1,6 @@
 #include "header.h"
 
-// Fungsi Utama untuk memindai angka
+// Fungsi Utama untuk menscan angka
 void scaningNumber(int *arr, FILE *fptr, int *n)
 {
 
