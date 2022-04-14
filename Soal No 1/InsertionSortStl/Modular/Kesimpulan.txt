@@ -1,0 +1,5 @@
+Waktu yang dibutuhkan 10 data adalah : 0.000000 
+Waktu yang dibutuhkan 100 data adalah : 0.000000 
+Waktu yang dibutuhkan 1000 data adalah : 0.002000 
+Waktu yang dibutuhkan 10000 data adalah : 0.038000 
+Waktu yang dibutuhkan 100000 data adalah : 3.379000 

@@ -1,5 +1,6 @@
 #include "header.h"
-  
+using namespace std;
+
 // Function to sort the array
 void insertionSort(std::vector<int> &vec)
 {
