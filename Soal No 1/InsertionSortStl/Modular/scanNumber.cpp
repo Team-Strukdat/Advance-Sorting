@@ -1,6 +1,8 @@
 #include "header.h"
 using namespace std;
 
+// Fungsi untuk menscan angka
+
 void scanNumber(vector<int> &v1, FILE *in, int *n)
 {
 	int dat;

@@ -1,3 +1,15 @@
+/*
+Nama Kelompok :
+1. Robby Ulung Pambudi
+2. M. Armand Giovani
+3. Fathin Muhashibi Putra
+*/
+
+/*
+Deskripsi :
+Sorting menggunakan Insertionsort dengan STL
+*/
+
 // C++ program to implement insertion sort using STL.
 #include <bits/stdc++.h>
 using namespace std;

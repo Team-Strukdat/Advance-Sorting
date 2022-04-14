@@ -1,6 +1,7 @@
 #include "header.h"
 
 // Function to print the array
+
 void printVector(vector<int> &v1, int sat, int n)
 {
 	FILE *out;

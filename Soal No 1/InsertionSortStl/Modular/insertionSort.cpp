@@ -2,6 +2,7 @@
 using namespace std;
 
 // Function to sort the array
+
 void insertionSort(std::vector<int> &vec)
 {
     for (auto it = vec.begin(); it != vec.end(); it++)
