@@ -1,8 +1,10 @@
 #include "header.h"
 
+long long int stability = 0;
+// Driver code
 int main()
 {
-    int arr[100000]; // Variabel array untuk menampung data pada file input
+    int arr[100000];
     int n = 0;
     FILE *in;
     FILE *kesimpulan;
@@ -10,17 +12,19 @@ int main()
     clock_t starttime, endtime;
 
     // 10 Data
-    in = fopen("input10.txt", "r"); // Membuka file input
-    scaningNumber(in, arr, &n);     // Membaca data dari file input dan memasukan kedalam array
+    in = fopen("input10.txt", "r");
+    scaningNumber(in, arr, &n);
     starttime = clock();
     // Sorted
     heapSort(arr, n);
     endtime = clock();
-    // cetak sorted array
+    // Print sorted array
     printArray(arr, n, 1);
-    // Cetak time
+    // Print time
     kesimpulan = fopen("kesimpulan.txt", "a");
     fprintf(kesimpulan, "10 Data memakan waktu : %f\n", (double)(endtime - starttime) / CLOCKS_PER_SEC);
+    fprintf(kesimpulan, "Comparasion : %llu\n", stability);
+    stability = 0;
     fclose(in);
 
     // 100 Data
@@ -35,6 +39,8 @@ int main()
     printArray(arr, n, 2);
     // Print time
     fprintf(kesimpulan, "100 Data memakan waktu : %f\n", (double)(endtime - starttime) / CLOCKS_PER_SEC);
+    fprintf(kesimpulan, "Comparasion : %llu\n", stability);
+    stability = 0;
     fclose(in);
 
     // 1000 data
@@ -49,6 +55,8 @@ int main()
     printArray(arr, n, 3);
     // Print time
     fprintf(kesimpulan, "1000 Data memakan waktu : %f\n", (double)(endtime - starttime) / CLOCKS_PER_SEC);
+    fprintf(kesimpulan, "Comparasion : %llu\n", stability);
+    stability = 0;
     fclose(in);
 
     // 10000 data
@@ -63,6 +71,8 @@ int main()
     printArray(arr, n, 4);
     // Print time
     fprintf(kesimpulan, "10000 Data memakan waktu : %f\n", (double)(endtime - starttime) / CLOCKS_PER_SEC);
+    fprintf(kesimpulan, "Comparasion : %llu\n", stability);
+    stability = 0;
     fclose(in);
 
     // 100000 data
@@ -77,6 +87,8 @@ int main()
     printArray(arr, n, 5);
     // Print time
     fprintf(kesimpulan, "100000 Data memakan waktu : %f\n", (double)(endtime - starttime) / CLOCKS_PER_SEC);
+    fprintf(kesimpulan, "Comparasion : %llu\n", stability);
+    stability = 0;
     fclose(in);
 
     fclose(kesimpulan);

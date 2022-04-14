@@ -15,6 +15,8 @@ Mengitung waktu menggunakan heap sort
 #include <stdio.h>
 #include <time.h>
 
+extern long long int stability ;
+
 void swap(int *a, int *b);
 void heapify(int arr[], int n, int i);
 void heapSort(int arr[], int n);

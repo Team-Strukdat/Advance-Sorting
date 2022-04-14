@@ -1,13 +1,15 @@
 #include "header.h"
 
+// A utility function to print an array of size n
 void printArray(int arr[], int n, int sat)
 {
-    FILE *output = NULL;
+    FILE *output;
     if (sat == 1)
     {
         output = fopen("output_10.txt", "w");
         for (int i = 0; i < n; i++)
         {
+            // Print variabel stability
             fprintf(output, "%d\n", arr[i]);
         }
     }
