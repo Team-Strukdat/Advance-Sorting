@@ -1,6 +1,6 @@
 #include "header.h"
 
-// Fungsi untuk menukarkan elemen
+// function to swap elements
 void swap(int *a, int *b)
 {
     int t = *a;

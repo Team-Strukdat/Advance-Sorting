@@ -1,0 +1,10 @@
+10 Data memakan waktu 0.000000 ms
+comparation 23
+100 Data memakan waktu 0.000000 ms
+comparation 451
+1000 Data memakan waktu 0.000000 ms
+comparation 5671
+10000 Data memakan waktu 0.006000 ms
+Stability 91905
+100000 Data memakan waktu 0.147000 ms
+comparation 1060778

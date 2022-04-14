@@ -15,6 +15,8 @@ Mengitung waktu menggunakan quick sort
 #include <stdio.h>
 #include <time.h>
 
+extern long long int comparation;
+
 void swap(int *a, int *b);
 int partition(int array[], int low, int high);
 void quickSort(int array[], int low, int high);

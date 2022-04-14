@@ -10,10 +10,10 @@ void selectionSort(FILE *fptr, int sat)
     while (fscanf(fptr, "%d", &arr[i]) == 1)
     {
 
-        // untuk menghitung banyaknya n (elemen) 
+        // untuk menghitung banyaknya n (elemen)
         n++;
 
-        //untuk menambah (increment) indeks array
+        // untuk menambah (increment) indeks array
         i++;
     }
     for (i = 0; i < n - 1; i++)
@@ -25,6 +25,7 @@ void selectionSort(FILE *fptr, int sat)
             {
                 min = arr[j];
                 index = j;
+                comparation += 1;
             }
         }
 
@@ -32,6 +33,7 @@ void selectionSort(FILE *fptr, int sat)
         int temp = arr[i];
         arr[i] = min;
         arr[index] = temp;
+        comparation += 1;
     }
     FILE *out;
     if (sat == 1)

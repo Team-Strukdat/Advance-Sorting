@@ -1,34 +1,36 @@
 #include "header.h"
 
-// Fungsi untuk mencari posisi partisi
+// function to find the partition position
 int partition(int array[], int low, int high)
 {
 
-    // pilih elemen paling kanan sebagai pivot
+    // select the rightmost element as pivot
     int pivot = array[high];
 
-    // pointer untuk elemen yang lebih besar
+    // pointer for greater element
     int i = (low - 1);
 
-    // traverse setiap elemen array
-    // bandingkan dengan pivot
+    // traverse each element of the array
+    // compare them with the pivot
     for (int j = low; j < high; j++)
     {
         if (array[j] <= pivot)
         {
 
-            // jika elemen yang lebih kecil dari pivot ditemukan
-            // tukar dengan elemen yang lebih besar yang ditunjukkan oleh i
+            // if element smaller than pivot is found
+            // swap it with the greater element pointed by i
             i++;
 
-            // tukar elemen di i dengan elemen di j
+            // swap element at i with element at j
             swap(&array[i], &array[j]);
+            comparation += 1;
         }
     }
 
-    // tukar elemen pivot dengan elemen yang lebih besar di i
+    // swap the pivot element with the greater element at i
     swap(&array[i + 1], &array[high]);
+    comparation += 1;
 
-    // return titik partisi
+    // return the partition point
     return (i + 1);
 }
