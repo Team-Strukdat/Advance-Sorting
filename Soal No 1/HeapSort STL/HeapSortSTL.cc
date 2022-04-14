@@ -35,7 +35,7 @@ void printVector(vector<int> &v1, int sat, int n)
 	else if (sat == 2)
 	{
 		out = fopen("output_100.txt", "w");
-		for (int i = 0; i < v1.capacity(); i++)
+		for (int i = 0; i < n; i++)
 		{
 			fprintf(out, "%d\n", v1[i]);
 		}
@@ -43,7 +43,7 @@ void printVector(vector<int> &v1, int sat, int n)
 	else if (sat == 3)
 	{
 		out = fopen("output_1000.txt", "w");
-		for (int i = 0; i < v1.capacity(); i++)
+		for (int i = 0; i < n; i++)
 		{
 			fprintf(out, "%d\n", v1[i]);
 		}
@@ -51,7 +51,7 @@ void printVector(vector<int> &v1, int sat, int n)
 	else if (sat == 4)
 	{
 		out = fopen("output_10000.txt", "w");
-		for (int i = 0; i < v1.capacity(); i++)
+		for (int i = 0; i < n; i++)
 		{
 			fprintf(out, "%d\n", v1[i]);
 		}
@@ -59,7 +59,7 @@ void printVector(vector<int> &v1, int sat, int n)
 	else if (sat == 5)
 	{
 		out = fopen("output_100000.txt", "w");
-		for (int i = 0; i < v1.capacity(); i++)
+		for (int i = 0; i < n; i++)
 		{
 			fprintf(out, "%d\n", v1[i]);
 		}
@@ -96,8 +96,9 @@ int main()
 	printVector(v1, 1, n);
 	fprintf(out, "Time taken for 10 elements is %f\n", (double)(end - start) / CLOCKS_PER_SEC);
 	fclose(in);
-	v1.empty();
+	v1.clear();
 	// Input 100
+
 	in = fopen("input100.txt", "r");
 	n = 0;
 	scanNumber(v1, in, &n);
@@ -108,7 +109,7 @@ int main()
 	printVector(v1, 2, n);
 	fprintf(out, "Time taken for 100 elements is %f\n", (double)(end - start) / CLOCKS_PER_SEC);
 	fclose(in);
-	v1.empty();
+	v1.clear();
 	// Input 1000
 	in = fopen("input1000.txt", "r");
 	n = 0;
@@ -120,7 +121,7 @@ int main()
 	printVector(v1, 3, n);
 	fprintf(out, "Time taken for 1000 elements is %f\n", (double)(end - start) / CLOCKS_PER_SEC);
 	fclose(in);
-	v1.empty();
+	v1.clear();
 	// Input 10000
 	in = fopen("input10000.txt", "r");
 	n = 0;
@@ -132,7 +133,7 @@ int main()
 	printVector(v1, 4, n);
 	fprintf(out, "Time taken for 10000 elements is %f\n", (double)(end - start) / CLOCKS_PER_SEC);
 	fclose(in);
-	v1.empty();
+	v1.clear();
 	// Input 100000
 	in = fopen("input100000.txt", "r");
 	n = 0;
@@ -144,7 +145,7 @@ int main()
 	printVector(v1, 5, n);
 	fprintf(out, "Time taken for 100000 elements is %f\n", (double)(end - start) / CLOCKS_PER_SEC);
 	fclose(in);
-	v1.empty();
+	v1.clear();
 	fclose(out);
 
 	return 0;

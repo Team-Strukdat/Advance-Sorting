@@ -1,5 +1,5 @@
-Time taken for 10 elements is 0.000005
-Time taken for 100 elements is 0.000046
-Time taken for 1000 elements is 0.000580
-Time taken for 10000 elements is 0.008349
-Time taken for 100000 elements is 0.098449
+Time taken for 10 elements is 0.000006
+Time taken for 100 elements is 0.000042
+Time taken for 1000 elements is 0.000597
+Time taken for 10000 elements is 0.006503
+Time taken for 100000 elements is 0.088345
