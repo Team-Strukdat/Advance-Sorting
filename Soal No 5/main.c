@@ -1,11 +1,18 @@
 #include "header.h"
+#include <stdio.h>
 
 int main()
 {
-    int arr[] = { 51, 26, 32, 45, 38, 89, 29, 58, 34, 23, 0 };
-    int n = sizeof(arr) / sizeof(arr[0]);
- 
-    heapSort(arr, n);
-    
-    printArray(arr, n);
+    int heap[1000];
+
+    int n = 0, temp;
+    while (printf("Masukan Anggka : "), scanf("%d", &temp), temp != 0)
+    { // Input angka
+
+        heap[++n] = temp;   // Masukan angka ke array
+        siftUp(heap, n);    // Sift up angka
+        printHeap(heap, n); // Print heap
+    }
+    printHeap(heap, n); // Print heap
+    return 0;
 }

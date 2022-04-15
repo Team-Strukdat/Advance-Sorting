@@ -1,27 +1,19 @@
 /*
-Nama Kelompok :
-1. Robby Ulung Pambudi 1042
-2. M. Armand Giovari 1054
-3. Fathin Muhashibi Putra 1229
+    Nama Kelompok :
+    1. Robby Ulung Pambudi
+    2. M. Armand Giovani
+    3. Fathin Muhashibi Putra
 */
 
 /*
-Deskripsi :
-Tulis kode untuk membaca satu set bilangan bulat positif (diakhiri oleh 0) dan buat tumpukan dalam array H
-dengan nilai terkecil di bagian atas tumpukan. Saat setiap bilangan bulat dibaca, itu dimasukkan di antara
-item yang ada sehingga properti heap dipertahankan. Setiap saat, jika n angka telah dibaca, maka H[1..n] 
-harus berisi heap. Asumsikan bahwa H cukup besar untuk menampung semua bilangan bulat.
-
-Diketahui data 51 26 32 45 38 89 29 58 34 23 0, tunjukkan isi H setelah masing-masing
-nomor telah dibaca dan diproses.
-
-Penyelesaian :
-
+Write code to read a set of positive integers (terminated by 0) and create a heap in an array H
+with the smallest value at the top of the heap. as each integer is read, it is inserted among the
+existing items such that the heap properties are maintained. at any time, if n numbers have been
+read, then H[1..n] must contain a heap. assume that H is large enough to hold all the integers.
+given the data 51 26 32 45 38 89 29 58 34 23 0, show the contents of H after each
+number has been read and processed.
 */
 
 #include <stdio.h>
-
-void swap(int *a, int *b);
-void heapSort(int arr[], int n);
-void makeheap(int arr[], int n, int i);
-void printArray(int arr[], int n);
+void siftUp(int heap[], int n);    // sifts up the value in heap[n] so that heap[1..n] contains a heap
+void printHeap(int heap[], int n); // prints the heap
