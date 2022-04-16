@@ -16,5 +16,8 @@ using namespace std;
 
 template <typename T>
 void selection_sort(vector<T> &array);
+
+template <typename T>
 void print(const vector<T> &array, int sat);
+
 void scanNumber(vector<int> &v1, FILE *in, int *n);
