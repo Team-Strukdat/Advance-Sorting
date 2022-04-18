@@ -5,13 +5,6 @@
     3. Fathin Muhashibi Putra (5025211229)
 */
 
-/* Deskripsi
-    Fungsi makeHeap dilewatkan array integer A.
-    jika A[0] berisi n, maka A[1] ke A[n] berisi angka dalam urutan arbitrer.
-    Tulis makeHeap sedemikian rupa sehingga A[1] hingga A[n] berisi max-heap (nilai terbesar di root).
-    Fungsi Anda harus membuat heap dengan memproses elemen dalam urutan A[2], A[3], …, A[n].
-*/
-
 // Fungsi makeHeap in C
 
 #include "header.h"
