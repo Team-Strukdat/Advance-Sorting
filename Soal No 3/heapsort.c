@@ -1,13 +1,13 @@
 /*
-Nama Kelompok :
-1. Robby Ulung Pambudi
-2. M. Armand Giovari
-3. Fathin Muhashibi Putra
+Kelompok 9 :
+    1. Robby Ulung Pambudi (5025211042)
+    2. M. Armand Giovani (5025211054)
+    3. Fathin Muhashibi Putra (5025211229)
 */
 
 /*
 Deskripsi :
-Heap disimpan dalam array integer satu dimensi num[1..n] dengan nilai terbesar di posisi 1. 
+Heap disimpan dalam array integer satu dimensi num[1..n] dengan nilai terbesar di posisi 1.
 Berikan algoritma efisien yang menghapus root dan mengatur ulang elemen lainnya
 sehingga heap sekarang menempati num[1] hingga num[n-1].
 
