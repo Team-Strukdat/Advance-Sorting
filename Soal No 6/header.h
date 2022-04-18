@@ -13,9 +13,9 @@ di sebelah kiri d kurang dari atau sama dengan A[d] dan semua elemen di sebelah 
 dari A[d].
 */
 
-#include <stdio.h>
+// Header file yang berisi prototype fungsi yang dipakai
 
-void swap(int *a, int *b);
-void heapSort(int arr[], int n);
-void heapify(int arr[], int n, int i);
-void sort(int arr[], int left[], int right[], int n);
+int partition(int *, int, int);
+void quickSort(int *, int, int);
+void swap(int *, int *);
+void printArray(int *, int);

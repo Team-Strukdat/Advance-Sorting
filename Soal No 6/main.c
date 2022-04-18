@@ -1,41 +1,30 @@
 #include "header.h"
+#include <stdio.h>
 
 int main()
 {
-    int n;
-    int arr[10000];
-    int left[10000];
-    int right[10000];
+  int q;
+  printf("How many elements do you want to insert? ");
+  scanf("%d", &q);
 
-    // Scaning Number
-    printf("Masukkan jumlah elemen : ");
-    scanf("%d", &n);
-    if (n == 0)
-    { // Fungsi untuk mencetak pesan jika tidak ada ruang untuk menyimpan v.
-        puts("Tidak ada elemen");
-    }
-    else
-    {
-        for (int i = 0; i < n; i++)
-        { // Fungsi untuk menambahkan nilai v ke heap.
-            printf("Masukkan elemen ke-%d : ", i + 1);
-            scanf("%d", &arr[i]);
-        }
-    }
-    sort(arr, left, right, n);
+  int A[q];
+  printf("Insert the elements:\n");
+  for (int i = 0; i < q; i++)
+  {
+    int insert;
+    scanf("%d", &insert);
+    A[i] = insert;
+  }
 
-    // Print array left
-    printf("Left : ");
-    for (int i = 0; i < n / 2; i++)
-    {
-        printf("%d ", left[i]);
-    }
-    printf("\n");
-    // Print array right
-    printf("Right : ");
-    for (int i = n / 2; i < n; i++)
-    {
-        printf("%d ", right[i - n / 2]);
-    }
-    printf("\n");
+  quickSort(A, 0, q - 1);
+  printArray(A, q);
+
+  return 0;
 }
+
+/*   
+A function is given an integer array, A, and two subscripts, m and n. The function must
+rearrange the elements A[m] to A[n] and return the subscript d such that all elements
+to the left of d are less than or equal to A[d] and all elements to the right of d are greater
+than A[d].
+*/
