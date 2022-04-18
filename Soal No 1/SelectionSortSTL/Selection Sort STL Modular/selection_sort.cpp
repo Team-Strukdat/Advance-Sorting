@@ -1,22 +1,19 @@
 #include "header.h"
+using namespace std;
 
-template <typename T>
-void selection_sort(vector<T> &array)
+void selection_sort(vector<int> &array)
 {
-    typedef typename vector<T>::iterator Itr;
-    Itr itr = array.begin();
-    while (itr != array.end())
+    int n = array.size();
+    for (int i = 0; i < n - 1; i++)
     {
-        Itr itr_min = itr;
-        for (Itr i = itr + 1; i != array.end(); i++)
+        int min = i;
+        for (int j = i + 1; j < n; j++)
         {
-            if (*i < *itr_min)
+            if (array[j] < array[min])
             {
-                itr_min = i;
+                min = j;
             }
         }
-        iter_swap(itr, itr_min);
-        itr++;
+        swap(array[i], array[min]);
     }
 }
-

@@ -1,4 +1,5 @@
 #include "header.h"
+using namespace std;
 
 void scanNumber(vector<int> &v1, FILE *in, int *n)
 {

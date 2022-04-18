@@ -1,7 +1,7 @@
 #include "header.h"
+using namespace std;
 
-template <typename T>
-void print(const vector<T> &array, int sat)
+void print(const vector<int> &array, int sat)
 {
     FILE *in;
     if (sat == 1)
