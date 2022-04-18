@@ -14,27 +14,21 @@
 
 // Fungsi makeHeap in C
 
-#include <stdio.h>
+#include "header.h"
 
-void heapify(int arr[], int n, int i)
+void makeHeap(int heap[], int n)
 {
-    // Mencari Nilai terbesar dari anak kiri dan kanan
-    int largest = i;
-    int left = 2 * i + 1;
-    int right = 2 * i + 2;
-
-    // Jika anak kiri lebih besar dari anak kanan
-    if (left > n && arr[left] < arr[largest])
-        largest = left;
-
-    // Jika anak kanan lebih besar dari anak kiri
-    if (right > n && arr[right] < arr[largest])
-        largest = right;
-
-    // Swap and continue heapifying if root is not largest
-    if (largest != i)
-    {
-        swap(&arr[i], &arr[largest]); // Swap
-        heapify(arr, n, largest);     // Heapify
+    // sifts up the value in heap[n] so that heap[1..n] contains a heap
+    int siftItem = heap[n]; // siftItem = elemen array
+    int child = n;          // child = elemen array
+    int parent = child / 2; // parent = elemen array
+    while (parent > 0)
+    { // jika parent > 0
+        if (siftItem <= heap[parent])
+            break;
+        heap[child] = heap[parent]; // move down parent
+        child = parent;
+        parent = child / 2;
     }
-}
+    heap[child] = siftItem;
+} // end makeHeap
